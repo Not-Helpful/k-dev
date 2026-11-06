@@ -1,0 +1,14 @@
+fmod SIMPL is
+sorts int bool com var value .
+subsort bool < int .
+subsort var < value .
+subsort bool < value .
+subsort int < value .
+op skip : -> com .
+op _:=_ : variable value -> com .
+op _;;_ : com com -> com .
+
+endfm
+
+
+quit
