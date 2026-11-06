@@ -1,6 +1,11 @@
 import Tiny.Prelude
 
+inductive SortExp2 : Type where
+  | three : SortExp2
+
 inductive SortExp : Type where
+  | «_+__TINY_Exp_Exp_Exp» (x0 : SortExp) (x1 : SortExp) : SortExp
+  | one : SortExp
   | succ (x0 : SortExp) : SortExp
   | zero : SortExp
 
@@ -21,6 +26,7 @@ mutual
 
   inductive SortKItem : Type where
     | inj_SortExp (x : SortExp) : SortKItem
+    | inj_SortExp2 (x : SortExp2) : SortKItem
     | inj_SortGeneratedCounterCell (x : SortGeneratedCounterCell) : SortKItem
     | inj_SortGeneratedTopCell (x : SortGeneratedTopCell) : SortKItem
     | inj_SortInt (x : SortInt) : SortKItem

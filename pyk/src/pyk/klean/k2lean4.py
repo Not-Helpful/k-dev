@@ -396,6 +396,7 @@ class K2Lean4:
         commands: tuple[Command, ...] = tuple(
             block for sorts in self._sort_sccs if (block := self._sort_block(sorts)) is not None
         )
+        print(self._sort_sccs)
         return Module(commands=commands)
 
     def _sort_block(self, sorts: tuple[str, ...]) -> Command | None:

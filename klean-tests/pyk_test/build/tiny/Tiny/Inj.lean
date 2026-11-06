@@ -24,6 +24,12 @@ instance : Inj SortExp SortKItem where
     | SortKItem.inj_SortExp x => some x
     | _ => none
 
+instance : Inj SortExp2 SortKItem where
+  inj := SortKItem.inj_SortExp2
+  retr
+    | SortKItem.inj_SortExp2 x => some x
+    | _ => none
+
 instance : Inj SortInt SortKItem where
   inj := SortKItem.inj_SortInt
   retr
