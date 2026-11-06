@@ -20,6 +20,7 @@ class CliError(Exception):
 
 
 def main() -> None:
+    print('HELLO^^^^^^^^^^^^')
     import logging
     import sys
 
